@@ -1,0 +1,120 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+	height: 100vh;
+	width: 100%;
+}
+
+.container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.container:after{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("img/bg.jpg") no-repeat center;
+	background-size: cover;
+}
+.content{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 1px 0px 14px 7px rgba(39, 33, 33, 0.19);
+}
+
+.img_container{
+	background: url("form_img.jpg") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.form_container{
+	padding: 25px 40px;
+}
+
+.selection{
+    margin: 0 auto;
+    border: none;
+}
+
+h1{
+	position: relative;
+	margin: 5px 0 10px;
+    font-size: 1.3rem;
+    font-style: oblique;
+    text-align: center;
+}
+
+.finput{
+	width: 100%;
+	border: none;
+    border-bottom: 1px solid rgb(101, 96, 96);
+	padding: 0.4rem 0.5rem;
+	font-size: 1rem;
+	margin-bottom: 10px;
+	transition: .3s;
+    color: rgb(112, 112, 112);
+}
+
+.phone_container{
+    display: block;
+}
+
+.phone{
+    width: 86%;
+}
+
+#info{
+	padding-bottom: 0.4rem;
+	text-align: center;
+	color: #5da5a5;
+ }
+
+label{
+    color: rgb(112, 112, 112);
+    padding: 0.2rem 1rem;
+	font-size: 1rem;
+	margin-bottom: 20px;
+}
+
+.email{
+    display: none;
+}
+#btn{
+	width: 100%;
+    margin-top: 1rem;
+	padding: 0.5rem 1rem;
+	background-color: #3d3d3d;
+	color: #fff;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+@media screen and (max-width: 776px){
+	.content{
+		grid-template-columns: 1fr;
+	}
+	.img_container{
+		height: 200px;
+	}
+}
+

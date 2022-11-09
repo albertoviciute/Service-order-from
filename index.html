@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Paslaugos</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="img_container"></div>
+        <div class="form_container">
+          <select name="selection" id="selection" class="selection">
+            <option value="black" selected="selected">Juoda</option>
+            <option value="grey">Pilka</option>
+            <option value="cadetblue">Mėtinė</option>
+            <option value="#404089">Melsva</option>
+            <option value="brown">Ruda</option>
+          </select>
+          <h1 id="htxt">
+            Užsisakykite paslaugą užpildydami registracijos formą žemiau
+          </h1>
+          <form action="#" id="form">
+            <input
+              class="finput"
+              type="text"
+              id="fname"
+              placeholder="Vardas *"
+              required
+            />
+            <input
+              class="finput"
+              type="text"
+              id="lname"
+              placeholder="Pavardė *"
+              required
+            />
+            <div class="phone_container">
+              <input
+                class="finput phone"
+                type="tel"
+                id="phone"
+                placeholder="+370 XXX XXXXX *"
+                pattern="[+](370)\d{8}"
+                required
+                title="Įveskite pagal reikalaujamą formatą, pavyzdžiui: +370XXXXXXXX"
+              />
+              <img
+                src="information.svg"
+                alt="Informacijos ženkliukas"
+                title="Šiuo numeriu su Jumis susisieks konsultantas"
+              />
+            </div>
+            <p id="info"></p>
+            <label for="sdate" id="label1"
+              >Paslaugos teikimo pradžios data *</label
+            >
+            <input
+              class="finput"
+              type="date"
+              id="sdate"
+              name="sdate"
+              oninput="startDate()"
+              required
+            />
+            <label for="edate" id="label2"
+              >Paslaugos teikimo pabaigos data *</label
+            >
+            <input
+              class="finput"
+              type="date"
+              id="edate"
+              name="edate"
+              oninput="endDate()"
+              required
+            />
+            <input type="checkbox" id="subs" name="subs" />
+            <label for="subs" id="label3">Prenumeruoti naujienlaiškį</label>
+            <input
+              class="finput email"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="El. paštas *"
+            />
+            <input class="button" type="submit" id="btn" value="Registruotis" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
